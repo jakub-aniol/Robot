@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Robot.JakubTest" duration-ms="32" started-at="2016-03-17T15:16:56Z" finished-at="2016-03-17T15:16:56Z">
+    <groups>
+    </groups>
+    <test name="Command line test" duration-ms="32" started-at="2016-03-17T15:16:56Z" finished-at="2016-03-17T15:16:56Z">
+      <class name="Robot.JakubTest">
+        <test-method status="PASS" signature="test()[pri:0, instance:Robot.JakubTest@35bbe5e8]" name="test" duration-ms="17" started-at="2016-03-17T16:16:56Z" finished-at="2016-03-17T16:16:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+      </class> <!-- Robot.JakubTest -->
+    </test> <!-- Command line test -->
+  </suite> <!-- Robot.JakubTest -->
+</testng-results>
