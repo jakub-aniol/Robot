@@ -2,7 +2,6 @@ package Settings;
 
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.Scanner;
 
 /**
  * Created by jakub on 21.03.16.
@@ -20,7 +19,7 @@ public class BookStore {
         }
     }
 
-    public BookStore(String name, String url){
+    public BookStore(String name, URL url){
         this.name = name;
         this.url = url;
     }
@@ -32,18 +31,5 @@ public class BookStore {
     public URL getUrl() {
         return this.url;
     }
-
-    public void setName() {
-        System.out.println("Podaj nazwe ksiegarni");
-        Scanner scanner = new Scanner("Legimi");
-        this.url = scanner.nextLine();
-    }
-
-    public void setUrl() {
-        System.out.println("Podaj adres URL ksiegarni, rozpoczyanjąc od \"www\"");
-        Scanner scanner = new Scanner("www.legimi.com/pl/ebooki/darmowe");
-        this.url = scanner.next();
-    }
-
 
 }

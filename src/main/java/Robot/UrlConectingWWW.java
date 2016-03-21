@@ -1,7 +1,6 @@
 package Robot;
 
 
-import Settings.BookStore;
 import org.apache.log4j.Logger;
 
 import java.io.IOException;
@@ -16,15 +15,11 @@ public class UrlConectingWWW {
 
     private URLConnection urlc;
 
-    UrlConectingWWW(URL url){
-        this.url = url;
-    }
     final static Logger logger = Logger.getLogger(UrlConectingWWW.class);
 
-    public URLConnection explore() {
+    public URLConnection explore(URL url) {
 
         try {
-            url = new URL("http://" + );
             urlc = url.openConnection();
         } catch (MalformedURLException e) {
             logger.error("Nieprawidłowy adres URL: " + url);

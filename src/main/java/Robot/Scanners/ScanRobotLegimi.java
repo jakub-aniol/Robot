@@ -36,8 +36,7 @@ public class ScanRobotLegimi {
                 starts = iterWWW.next();
                 if (starts.startsWith("href='/pl/ebook-")) {
                     tytul = starts.substring(16, starts.length() - 12);
-                    logger.info(tytul + bsLegimi.getName());
-                    System.out.println(bsLegimi.getName());
+                    logger.info(bsLegimi.getName() +" "+ tytul);
                 }
             }
         } catch (IndexOutOfBoundsException e) {
