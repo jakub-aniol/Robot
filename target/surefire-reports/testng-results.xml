@@ -1,17 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Robot.JakubTest" duration-ms="37" started-at="2016-03-18T13:35:24Z" finished-at="2016-03-18T13:35:24Z">
+  <suite name="Robot.BookStoreTest" duration-ms="175" started-at="2016-03-21T14:25:35Z" finished-at="2016-03-21T14:25:35Z">
     <groups>
     </groups>
-    <test name="Command line test" duration-ms="37" started-at="2016-03-18T13:35:24Z" finished-at="2016-03-18T13:35:24Z">
-      <class name="Robot.JakubTest">
-        <test-method status="PASS" signature="test()[pri:0, instance:Robot.JakubTest@5a39699c]" name="test" duration-ms="13" started-at="2016-03-18T14:35:24Z" finished-at="2016-03-18T14:35:24Z">
+    <test name="Command line test" duration-ms="175" started-at="2016-03-21T14:25:35Z" finished-at="2016-03-21T14:25:35Z">
+      <class name="Robot.BookStoreTest">
+        <test-method status="PASS" signature="ifBookStoreNameExistTest()[pri:0, instance:Robot.BookStoreTest@5a39699c]" name="ifBookStoreNameExistTest" duration-ms="146" started-at="2016-03-21T15:25:35Z" finished-at="2016-03-21T15:25:35Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test -->
-      </class> <!-- Robot.JakubTest -->
+        </test-method> <!-- ifBookStoreNameExistTest -->
+        <test-method status="PASS" signature="ifBookStoreUrlAddressIsProper()[pri:0, instance:Robot.BookStoreTest@5a39699c]" name="ifBookStoreUrlAddressIsProper" duration-ms="6" started-at="2016-03-21T15:25:35Z" finished-at="2016-03-21T15:25:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ifBookStoreUrlAddressIsProper -->
+        <test-method status="PASS" signature="ifBookStoreUrlExistTest()[pri:0, instance:Robot.BookStoreTest@5a39699c]" name="ifBookStoreUrlExistTest" duration-ms="4" started-at="2016-03-21T15:25:35Z" finished-at="2016-03-21T15:25:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ifBookStoreUrlExistTest -->
+      </class> <!-- Robot.BookStoreTest -->
     </test> <!-- Command line test -->
-  </suite> <!-- Robot.JakubTest -->
+  </suite> <!-- Robot.BookStoreTest -->
 </testng-results>

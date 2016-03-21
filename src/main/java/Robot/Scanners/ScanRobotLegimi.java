@@ -1,8 +1,8 @@
 package Robot.Scanners;
 
+import Settings.BookStore;
 import org.apache.log4j.Logger;
 
-import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
@@ -10,16 +10,20 @@ import java.util.List;
  * Created by jakub on 21.03.16.
  */
 public class ScanRobotLegimi {
+    BookStore bsLegimi;
+
+    public ScanRobotLegimi(){
+
+    }
+
     final static Logger logger = Logger.getLogger(ScanRobotLegimi.class);
 
-    private List<String> contentWWW = new ArrayList<String>();
     private List<String> subContentWWW = null;
 
     public void subRead(List contentWWW) {
 
         int firstOccurence = contentWWW.indexOf("Najpopularniejsze");
         int lastOccurence = contentWWW.indexOf("id=\"collection0\"");
-
 
         try {
             subContentWWW = contentWWW.subList(firstOccurence, lastOccurence);
