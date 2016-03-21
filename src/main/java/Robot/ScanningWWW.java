@@ -18,10 +18,10 @@ public class ScanningWWW {
     List<String> contentWWW = new ArrayList<String>();
 
 
-    public List<String> doScan(InputStream input) {
+    public List<String> doScan(InputStream strwww) {
 
         try {
-            Scanner scanner = new Scanner(input);
+            Scanner scanner = new Scanner(strwww);
 
             while (scanner.hasNext()) {
                 scanString = scanner.next();
@@ -30,12 +30,10 @@ public class ScanningWWW {
 
 
         } catch (NullPointerException e) {
-            logger.error("Brak danych lub Brak podanej strony: " + ConectingWWW.url.getPath(), e);
+            logger.error("Brak danych lub Brak podanej strony: ", e);
         }
 
-
-
-        return contentWWW;
+       return contentWWW;
 
     }
 

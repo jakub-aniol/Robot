@@ -1,4 +1,4 @@
-package Robot;
+package Settings;
 
 import java.util.Scanner;
 
@@ -9,11 +9,10 @@ public class BookStore {
     String name;
     String url;
 
-    BookStore(){
+    public BookStore(){
         this.name=getName();
         this.url=getUrl();
     }
-
 
     public String getName() {
         System.out.println("Podaj nazwe ksiegarni");

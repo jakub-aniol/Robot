@@ -9,9 +9,11 @@ public class Start {
     public static void main(String[] args) {
 
         ScanningWWW scanwww = new ScanningWWW();
-        ConectingWWW conwww = new ConectingWWW();
+        UrlConectingWWW conwww = new UrlConectingWWW();
+        InputStreamWWW instrWWW = new InputStreamWWW();
         ScanRobotLegimi scanLegimi = new ScanRobotLegimi();
-        scanLegimi.subRead(scanwww.doScan(conwww.explore()));
+
+        scanLegimi.subRead(scanwww.doScan(instrWWW.pullWWW(conwww.explore())));
 
     }
 
