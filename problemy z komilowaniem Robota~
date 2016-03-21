@@ -1,0 +1,65 @@
+kompilacja i uruchamianie z linii komend.
+
+
+KOMPILACJA
+Będąc w katalogu /home/ja/IdeaProjects/Robot/src/main/java
+javac -cp .:/IdeaProjects/Robot/src/main/java/Robot:/home/ja/JAR-Biblioteki/log4j-1.2.17.jar Robot/Czytanie.java
+kompiluje
+
+
+w katalogu /home/ja/IdeaProjects/Robot/src/main/java
+javac -cp .:/IdeaProjects/Robot/src/main/java/Robot:/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar Robot/Czytanie.java
+nie kompiluje pojawia się komunikat:
+
+Robot/Czytanie.java:3: error: package org.apache.log4j does not exist
+import org.apache.log4j.Logger
+
+
+URUCHAMIANIE
+Będąc w katalogu /home/ja/IdeaProjects/Robot/src/main/java
+java -cp .:/IdeaProjects/Robot/src/main/java/Robot:/home/ja/JAR-Biblioteki/log4j-1.2.17.jar Robot.Czytanie
+kompiluje ale jest błąd:
+log4j:WARN No appenders could be found for logger (Robot.Czytanie).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+
+Nie zapisuje w pliku logów
+
+Będąc w katalogu /home/ja/IdeaProjects/Robot/src/main/java
+java -cp .:/IdeaProjects/Robot/src/main/java/Robot:/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar Robot.Czytanie
+nie uruchamia pojawia się bład:
+
+Exception in thread "main" java.lang.NoClassDefFoundError: org/apache/log4j/Logger
+	at Robot.Czytanie.<clinit>(Czytanie.java:18)
+Caused by: java.lang.ClassNotFoundException: org.apache.log4j.Logger
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 1 more
+
+
+
+zapisuje do logów wówczas:
+java -cp .:/IdeaProjects/Robot/src/main/java/Robot:/home/ja/JAR-Biblioteki/log4j-1.2.17.jar:/home/ja/IdeaProjects/Robot/target/classes/log4j.properties -Dlog4j.configuration=file:/home/ja/IdeaProjects/Robot/target/classes/log4j.properties Robot.Czytanie
+
+
+Testy Crona
+15 1 * * * javac -cp .:/home/ja/IdeaProjects/Robot/src/main/java/Robot:/home/ja/JAR-Biblioteki/log4j-1.2.17.jar /home/ja/IdeaProjects/Robot/src/main/java/Robot/Czytanie.java
+
+01 1 * * * java -cp .:/home/ja/IdeaProjects/Robot/src/main/java/Robot:/home/ja/JAR-Biblioteki/log4j-1.2.17.jar:/home/ja/IdeaProjects/Robot/target/classes/log4j.properties -Dlog4j.configuration=file:/home/ja/IdeaProjects/Robot/target/classes/log4j.properties Robot.Czytanie
+
+02 1 * * * java -cp .:/home/ja/IdeaProjects/Robot/src/main/java/Robot:/home/ja/JAR-Biblioteki/log4j-1.2.17.jar -Dlog4j.configuration=file:/home/ja/IdeaProjects/Robot/target/classes/log4j.properties Robot.Czytanie
+
+03 1 * * * java -cp .:/home/ja/IdeaProjects/Robot/src/main/java/Robot:/home/ja/JAR-Biblioteki/log4j-1.2.17.jar:/home/ja/IdeaProjects/Robot/target/classes/log4j.properties Robot.Czytanie
+
+10 1 * * * java -cp .:/home/ja/IdeaProjects/Robot/src/main/java/Robot:/home/ja/JAR-Biblioteki/log4j-1.2.17.jar:/home/ja/IdeaProjects/Robot/src/main/resources/log4j.properties -Dlog4j.configuration=file:/home/ja/IdeaProjects/Robot/src/main/resources/log4j.properties Robot.Czytanie
+
+11 1 * * * java -cp .:/home/ja/IdeaProjects/Robot/src/main/java/Robot:/home/ja/JAR-Biblioteki/log4j-1.2.17.jar -Dlog4j.configuration=file:/home/ja/IdeaProjects/Robot/src/main/resources/log4j.properties Robot.Czytanie
+
+12 1 * * * java -cp .:/home/ja/IdeaProjects/Robot/src/main/java/Robot:/home/ja/JAR-Biblioteki/log4j-1.2.17.jar:/home/ja/IdeaProjects/Robot/src/main/resources/log4j.properties Robot.Czytanie
+
+
+
+
+
