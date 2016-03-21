@@ -20,7 +20,7 @@ public class InputStreamWWW {
         try {
             input = conwww.getInputStream();
         } catch (IOException e) {
-            logger.error("Brak podanej strony: " + conwww.getContentEncoding().toString());
+            logger.error("Brak podanej strony: " + conwww.getContentEncoding());
         }
 
         return input;

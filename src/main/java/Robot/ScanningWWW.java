@@ -27,8 +27,6 @@ public class ScanningWWW {
                 scanString = scanner.next();
                 contentWWW.add(scanString);
             }
-
-
         } catch (NullPointerException e) {
             logger.error("Brak danych lub Brak podanej strony: ", e);
         }

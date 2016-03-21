@@ -12,9 +12,10 @@ import java.util.List;
 public class ScanRobotLegimi {
     BookStore bsLegimi;
 
-    public ScanRobotLegimi(){
-
+    public ScanRobotLegimi(BookStore bookStore) {
+        bsLegimi = bookStore;
     }
+
 
     final static Logger logger = Logger.getLogger(ScanRobotLegimi.class);
 
@@ -35,7 +36,8 @@ public class ScanRobotLegimi {
                 starts = iterWWW.next();
                 if (starts.startsWith("href='/pl/ebook-")) {
                     tytul = starts.substring(16, starts.length() - 12);
-                    logger.info(tytul);
+                    logger.info(tytul + bsLegimi.getName());
+                    System.out.println(bsLegimi.getName());
                 }
             }
         } catch (IndexOutOfBoundsException e) {
