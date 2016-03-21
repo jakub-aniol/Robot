@@ -17,7 +17,7 @@ public class BookStoreTest {
 
         String expected = null;
         //when
-        String result = BookStore.getName();
+        String result = new BookStore().getName();
         //then
         assertThat(result).isNotEqualTo(expected);
 
@@ -28,7 +28,7 @@ public class BookStoreTest {
         //given
         String expected = null;
         //when
-        String result = BookStore.getUrl();
+        String result = new BookStore().getUrl();
         //then
         assertThat(result).isNotEqualTo(expected);
 
@@ -39,7 +39,7 @@ public class BookStoreTest {
         //given
         Boolean expected = true;
         //when
-        Boolean result = BookStore.getUrl().startsWith("www.");
+        Boolean result = new BookStore().getUrl().startsWith("www.");
         //then
         assertThat(result).isEqualTo(expected);
     }
