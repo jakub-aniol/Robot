@@ -11,8 +11,8 @@ public class FileBuffer {
 			String sCurrentLine;
 
 			while ((sCurrentLine = br.readLine()) != null) {
-				System.out.println(sCurrentLine);
-				sb.append(sCurrentLine);
+				
+				sb.append(sCurrentLine+"\n");
 			}
 
 		} catch (IOException e) {
