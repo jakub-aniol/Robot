@@ -7,18 +7,16 @@ import javax.swing.*;
 
 public class GUI extends JFrame {
 	static final String bookStoreList[] = { "Legimi" };
-	static final String LogList[] = new String[5];
-	
 	JComboBox bookStoreComboBox;
-	JList<String> list = new JList<>(LogList);
 	JButton applyButton = new JButton("Apply");
+	JTextArea txtLog = new JTextArea();
 
 	final static int maxGap = 5;
 	GridLayout experimentLayout = new GridLayout(0, 2);
 
 	public GUI(String name) {
 		super(name);
-		setResizable(false);
+		setResizable(true);
 	}
 
 	public void initBookstores() {
@@ -42,10 +40,11 @@ public class GUI extends JFrame {
 		// Add buttons to experiment with Grid Layout
 		Robot.add(new JButton("Show"));
 
-		// Add list
-		list.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
-		list.setLayoutOrientation(JList.VERTICAL);
-		Robot.add(list, BorderLayout.EAST);
+		// Add TextArea
+		txtLog.setLineWrap(true);
+		txtLog.setText(FileBuffer.OpenLogFile("logingRobot2.log"));
+		
+		Robot.add(txtLog, BorderLayout.EAST);
 
 		controls.add(new Label("Bookstore List:"));
 		controls.add(new Label(" "));
@@ -56,7 +55,6 @@ public class GUI extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				// Get the horizontal gap value
 				String bookStore = (String) bookStoreComboBox.getSelectedItem();
-
 				// Set up the horizontal gap value
 				experimentLayout.setHgap(Integer.parseInt(bookStore));
 				// Set up the layout of the buttons
