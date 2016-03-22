@@ -1,12 +1,14 @@
 package GUI;
 
+import Settings.BookStore;
+import Robot.Scanners.*;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
 public class GUI extends JFrame {
-	static final String bookStoreList[] = { "bookstore1", "bookstore2"};
-
+	static final String bookStoreList[] = {"Legimi"};
+	static final String LogList[] = {"Legimi"};
 	JComboBox bookStoreComboBox;
 	JList<String> list = new JList<>(bookStoreList);
 	JButton applyButton = new JButton("Apply");
