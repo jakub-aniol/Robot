@@ -1,16 +1,16 @@
 package GUI;
 
-import Settings.BookStore;
-import Robot.Scanners.*;
+import Robot.FileBuffer;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
 public class GUI extends JFrame {
-	static final String bookStoreList[] = {"Legimi"};
-	static final String LogList[] = {"Legimi"};
+	static final String bookStoreList[] = { "Legimi" };
+	static final String LogList[] = new String[5];
+	
 	JComboBox bookStoreComboBox;
-	JList<String> list = new JList<>(bookStoreList);
+	JList<String> list = new JList<>(LogList);
 	JButton applyButton = new JButton("Apply");
 
 	final static int maxGap = 5;

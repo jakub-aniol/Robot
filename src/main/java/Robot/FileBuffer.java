@@ -1,11 +1,10 @@
 package Robot;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class OpenAndReadFile {
+public class FileBuffer {
 	public static String OpenLogFile(String path) {
 		StringBuilder sb = new StringBuilder();
 		try (BufferedReader br = new BufferedReader(new FileReader(path))) {
@@ -20,11 +19,6 @@ public class OpenAndReadFile {
 			e.printStackTrace();
 		}
 		return sb.toString();
-	}
-
-	public static void main(String[] args) {
-		OpenAndReadFile log1 = new OpenAndReadFile();
-		log1.OpenLogFile("logingRobot2.log");
 	}
 
 }
