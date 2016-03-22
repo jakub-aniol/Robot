@@ -1,12 +1,13 @@
 package Robot;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
 public class OpenAndReadFile {
 	public static String OpenLogFile(String path) {
+		//File file = new File(path);
+
 		StringBuilder sb = new StringBuilder();
 		try (BufferedReader br = new BufferedReader(new FileReader(path))) {
 			String sCurrentLine;
@@ -24,6 +25,7 @@ public class OpenAndReadFile {
 
 	public static void main(String[] args) {
 		OpenAndReadFile log1 = new OpenAndReadFile();
+
 		log1.OpenLogFile("logingRobot2.log");
 	}
 
