@@ -1,0 +1,69 @@
+package Settings;
+
+import org.testng.annotations.Test;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import static org.assertj.core.api.Assertions.assertThat;
+
+/**
+ * Created by jakub on 21.03.16.
+ */
+public class BookStoreTest {
+
+    @Test
+    public static void ifBookStoreNameExistTest() {
+        //given
+        BookStore bookstore = null;
+
+        try {
+            bookstore = new BookStore("legimi", new URL("http://www.legimi.com/pl/ebooki/darmowe"));
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+        String expected = null;
+        //when
+        String result = bookstore.getName();
+        //then
+        assertThat(result).isNotEqualTo(expected);
+
+    }
+
+    @Test
+    public static void ifBookStoreUrlExistTest() {
+        //given
+        BookStore bookstore = null;
+
+        try {
+            bookstore = new BookStore("legimi", new URL("http://www.legimi.com/pl/ebooki/darmowe"));
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+        String expected = null;
+        //when
+        URL result = bookstore.getUrl();
+        //then
+        assertThat(result).isNotEqualTo(expected);
+
+    }
+
+    @Test
+    public static void ifBookStoreUrlAddressIsProper(){
+        BookStore bookstore = null;
+
+        try {
+            bookstore = new BookStore("legimi", new URL("http://www.legimi.com/pl/ebooki/darmowe"));
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+
+        Boolean expected = true;
+        //when
+        Boolean result = bookstore.getUrl().toString().startsWith("http://");
+        //then
+        assertThat(result).isEqualTo(expected);
+    }
+
+
+}
