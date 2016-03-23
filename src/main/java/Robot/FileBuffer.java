@@ -1,10 +1,11 @@
+/*
 package Robot;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class OpenAndReadFile {
+public class FileBuffer {
 	public static String OpenLogFile(String path) {
 		//File file = new File(path);
 
@@ -13,8 +14,8 @@ public class OpenAndReadFile {
 			String sCurrentLine;
 
 			while ((sCurrentLine = br.readLine()) != null) {
-				System.out.println(sCurrentLine);
-				sb.append(sCurrentLine);
+
+				sb.append(sCurrentLine + "\n");
 			}
 
 		} catch (IOException e) {
@@ -23,10 +24,4 @@ public class OpenAndReadFile {
 		return sb.toString();
 	}
 
-	public static void main(String[] args) {
-		OpenAndReadFile log1 = new OpenAndReadFile();
-
-		log1.OpenLogFile("logingRobot2.log");
-	}
-
-}
+}*/
