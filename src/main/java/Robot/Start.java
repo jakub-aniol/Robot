@@ -3,6 +3,7 @@ package Robot;
 import Robot.Scanners.ScanRobotLegimi;
 import Robot.Scanners.ScanRobotUpolujEbooka;
 import Settings.BookStore;
+import GUI.GUI;
 import org.apache.log4j.Logger;
 
 import java.net.MalformedURLException;
@@ -19,6 +20,7 @@ public class Start {
 
         BookStore bsLegimi = null;
         BookStore bsUpolujEbooka = null;
+        
 
         try {
             bsUpolujEbooka = new BookStore("Upolujebooka", new URL("http://upolujebooka.pl/kategoria,8248,darmowe_e-booki.html?count=60"));
@@ -43,10 +45,13 @@ public class Start {
 
         ScanRobotLegimi scanRobotLegimi = new ScanRobotLegimi(bsLegimi);
         ScanRobotUpolujEbooka scanRobotUpolujEbooka = new ScanRobotUpolujEbooka(bsUpolujEbooka);
+        
 
         scanRobotLegimi.showLegimiBooks(scanRobotLegimi.doSubContentWWW(scanningWWW.doScan(inputStreamWWW.pullWWW(urlConectingWWW.explore(bsLegimi.getUrl())))));
         scanRobotUpolujEbooka.showUpolujEbookaBooks(scanRobotUpolujEbooka.doSubContentWWW(scanningWWW.doScan(inputStreamWWW.pullWWW(urlConectingWWW.explore(bsUpolujEbooka.getUrl())))));
-
+        
+        GUI gui = new GUI();
+        gui.run();
 
     }
 
