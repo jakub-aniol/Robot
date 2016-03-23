@@ -4,7 +4,6 @@
   <test name="Command line test" preserve-order="false">
     <classes>
       <class name="Robot.InputStreamWWWTest"/>
-      <class name="Robot.Scanners.ScanRobotLegimiTest"/>
       <class name="Robot.ScanningWWWTest"/>
       <class name="Settings.BookStoreTest"/>
     </classes>
