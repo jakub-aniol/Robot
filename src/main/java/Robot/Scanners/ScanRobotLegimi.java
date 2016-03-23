@@ -1,3 +1,4 @@
+
 package Robot.Scanners;
 
 import Settings.BookStore;
@@ -6,9 +7,9 @@ import org.apache.log4j.Logger;
 import java.util.List;
 import java.util.ListIterator;
 
-/**
- * Created by jakub on 21.03.16.
- */
+
+
+
 public class ScanRobotLegimi {
     final static Logger logger = Logger.getLogger(ScanRobotLegimi.class);
     BookStore bsLegimi;

@@ -1,3 +1,4 @@
+/*
 package Settings;
 
 import org.testng.annotations.AfterMethod;
@@ -9,9 +10,11 @@ import java.net.URL;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+*/
 /**
  * Created by jakub on 21.03.16.
- */
+ *//*
+
 public class BookStoreTest {
 
     BookStore bookstore;
@@ -81,3 +84,4 @@ public class BookStoreTest {
 
 
 }
+*/

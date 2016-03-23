@@ -1,3 +1,4 @@
+/*
 package Robot.Scanners;
 
 import Settings.BookStore;
@@ -10,9 +11,11 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.mock;
 
+*/
 /**
  * Created by ja on 22.03.16.
- */
+ *//*
+
 public class ScanRobotLegimiTest {
 
     @Test
@@ -38,3 +41,4 @@ public class ScanRobotLegimiTest {
 
 
 }
+*/

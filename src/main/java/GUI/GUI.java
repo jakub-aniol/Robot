@@ -1,6 +1,7 @@
+/*
 package GUI;
 
-import Robot.FileBuffer;
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -92,4 +93,4 @@ public class GUI extends JFrame {
 			}
 		});
 	}
-}
+}*/
