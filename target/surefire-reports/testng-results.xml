@@ -1,67 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="6" passed="6">
+<testng-results skipped="0" failed="0" total="5" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Command line suite" duration-ms="444" started-at="2016-03-23T07:43:17Z" finished-at="2016-03-23T07:43:17Z">
+  <suite name="Command line suite" duration-ms="357" started-at="2016-03-23T12:48:11Z" finished-at="2016-03-23T12:48:11Z">
     <groups>
     </groups>
-    <test name="Command line test" duration-ms="444" started-at="2016-03-23T07:43:17Z" finished-at="2016-03-23T07:43:17Z">
+    <test name="Command line test" duration-ms="357" started-at="2016-03-23T12:48:11Z" finished-at="2016-03-23T12:48:11Z">
       <class name="Robot.ScanningWWWTest">
-        <test-method status="PASS" signature="wheatherInputStreamMakesAnArrayList()[pri:0, instance:Robot.ScanningWWWTest@5e025e70]" name="wheatherInputStreamMakesAnArrayList" duration-ms="18" started-at="2016-03-23T08:43:17Z" finished-at="2016-03-23T08:43:17Z">
+        <test-method status="PASS" signature="wheatherInputStreamMakesAnArrayList()[pri:0, instance:Robot.ScanningWWWTest@4563e9ab]" name="wheatherInputStreamMakesAnArrayList" duration-ms="17" started-at="2016-03-23T13:48:11Z" finished-at="2016-03-23T13:48:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- wheatherInputStreamMakesAnArrayList -->
       </class> <!-- Robot.ScanningWWWTest -->
       <class name="Robot.InputStreamWWWTest">
-        <test-method status="PASS" signature="wheatherOpeningConectionGivesInputStream()[pri:0, instance:Robot.InputStreamWWWTest@4563e9ab]" name="wheatherOpeningConectionGivesInputStream" duration-ms="279" started-at="2016-03-23T08:43:17Z" finished-at="2016-03-23T08:43:17Z">
+        <test-method status="PASS" signature="wheatherOpeningConectionGivesInputStream()[pri:0, instance:Robot.InputStreamWWWTest@19bb089b]" name="wheatherOpeningConectionGivesInputStream" duration-ms="211" started-at="2016-03-23T13:48:11Z" finished-at="2016-03-23T13:48:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- wheatherOpeningConectionGivesInputStream -->
       </class> <!-- Robot.InputStreamWWWTest -->
       <class name="Settings.BookStoreTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:Settings.BookStoreTest@1fbc7afb]" name="setUp" is-config="true" duration-ms="9" started-at="2016-03-23T08:43:17Z" finished-at="2016-03-23T08:43:17Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:Settings.BookStoreTest@11531931]" name="setUp" is-config="true" duration-ms="14" started-at="2016-03-23T13:48:11Z" finished-at="2016-03-23T13:48:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="ifBookStoreNameExistTest()[pri:0, instance:Settings.BookStoreTest@1fbc7afb]" name="ifBookStoreNameExistTest" duration-ms="79" started-at="2016-03-23T08:43:17Z" finished-at="2016-03-23T08:43:17Z">
+        <test-method status="PASS" signature="ifBookStoreNameExistTest()[pri:0, instance:Settings.BookStoreTest@11531931]" name="ifBookStoreNameExistTest" duration-ms="85" started-at="2016-03-23T13:48:11Z" finished-at="2016-03-23T13:48:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ifBookStoreNameExistTest -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:Settings.BookStoreTest@1fbc7afb]" name="cleanUp" is-config="true" duration-ms="0" started-at="2016-03-23T08:43:17Z" finished-at="2016-03-23T08:43:17Z">
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:Settings.BookStoreTest@11531931]" name="cleanUp" is-config="true" duration-ms="0" started-at="2016-03-23T13:48:11Z" finished-at="2016-03-23T13:48:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanUp -->
-        <test-method status="PASS" signature="ifBookStoreUrlAddressIsProper()[pri:0, instance:Settings.BookStoreTest@1fbc7afb]" name="ifBookStoreUrlAddressIsProper" duration-ms="1" started-at="2016-03-23T08:43:17Z" finished-at="2016-03-23T08:43:17Z">
+        <test-method status="PASS" signature="ifBookStoreUrlAddressIsProper()[pri:0, instance:Settings.BookStoreTest@11531931]" name="ifBookStoreUrlAddressIsProper" duration-ms="1" started-at="2016-03-23T13:48:11Z" finished-at="2016-03-23T13:48:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ifBookStoreUrlAddressIsProper -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:Settings.BookStoreTest@1fbc7afb]" name="setUp" is-config="true" duration-ms="0" started-at="2016-03-23T08:43:17Z" finished-at="2016-03-23T08:43:17Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:Settings.BookStoreTest@11531931]" name="setUp" is-config="true" duration-ms="0" started-at="2016-03-23T13:48:11Z" finished-at="2016-03-23T13:48:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="ifBookStoreUrlExistTest()[pri:0, instance:Settings.BookStoreTest@1fbc7afb]" name="ifBookStoreUrlExistTest" duration-ms="1" started-at="2016-03-23T08:43:17Z" finished-at="2016-03-23T08:43:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ifBookStoreUrlExistTest -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:Settings.BookStoreTest@1fbc7afb]" name="cleanUp" is-config="true" duration-ms="0" started-at="2016-03-23T08:43:17Z" finished-at="2016-03-23T08:43:17Z">
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:Settings.BookStoreTest@11531931]" name="cleanUp" is-config="true" duration-ms="0" started-at="2016-03-23T13:48:11Z" finished-at="2016-03-23T13:48:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanUp -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:Settings.BookStoreTest@1fbc7afb]" name="setUp" is-config="true" duration-ms="0" started-at="2016-03-23T08:43:17Z" finished-at="2016-03-23T08:43:17Z">
+        <test-method status="PASS" signature="ifBookStoreUrlExistTest()[pri:0, instance:Settings.BookStoreTest@11531931]" name="ifBookStoreUrlExistTest" duration-ms="1" started-at="2016-03-23T13:48:11Z" finished-at="2016-03-23T13:48:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ifBookStoreUrlExistTest -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:Settings.BookStoreTest@11531931]" name="setUp" is-config="true" duration-ms="0" started-at="2016-03-23T13:48:11Z" finished-at="2016-03-23T13:48:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:Settings.BookStoreTest@1fbc7afb]" name="cleanUp" is-config="true" duration-ms="0" started-at="2016-03-23T08:43:17Z" finished-at="2016-03-23T08:43:17Z">
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:Settings.BookStoreTest@11531931]" name="cleanUp" is-config="true" duration-ms="0" started-at="2016-03-23T13:48:11Z" finished-at="2016-03-23T13:48:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanUp -->
       </class> <!-- Settings.BookStoreTest -->
-      <class name="Robot.Scanners.ScanRobotLegimiTest">
-        <test-method status="PASS" signature="wheatherSubArrayListIsFilled()[pri:0, instance:Robot.Scanners.ScanRobotLegimiTest@11531931]" name="wheatherSubArrayListIsFilled" duration-ms="25" started-at="2016-03-23T08:43:17Z" finished-at="2016-03-23T08:43:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- wheatherSubArrayListIsFilled -->
-      </class> <!-- Robot.Scanners.ScanRobotLegimiTest -->
     </test> <!-- Command line test -->
   </suite> <!-- Command line suite -->
 </testng-results>
