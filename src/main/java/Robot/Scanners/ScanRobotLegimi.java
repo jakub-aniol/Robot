@@ -11,6 +11,7 @@ import java.util.ListIterator;
  */
 public class ScanRobotLegimi {
     final static Logger logger = Logger.getLogger(ScanRobotLegimi.class);
+
     BookStore bsLegimi;
 
     public ScanRobotLegimi(BookStore bookStore) {
