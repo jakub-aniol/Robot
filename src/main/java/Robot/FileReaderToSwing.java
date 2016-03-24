@@ -15,7 +15,7 @@ public class FileReaderToSwing {
 
 			try {
 				while ((sCurrentLine = br.readLine()) != null) {
-
+					
 					if (new FindPattern().FP(sCurrentLine, bookstoreName)) {
 						sb.append(sCurrentLine + "\n");
 
@@ -33,3 +33,4 @@ public class FileReaderToSwing {
 		return sb.toString();
 	}
 }
+

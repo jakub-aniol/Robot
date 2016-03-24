@@ -7,85 +7,82 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * Klasa odpowiedzialna za interfejs użytkownika
+ * 
+ * @author slawomir
+ *
+ */
+
 public class GUI extends JFrame {
 
 	private JButton buttonSelect = new JButton("Select");
-	private JButton buttonRemove = new JButton("Remove");
-	
+
 	public GUI() {
+		/**
+		 * Ustawienie parametrów interfejsu: Tekst nagłówka, położenie
+		 * komponentów
+		 */
 		super("ROBOT");
 		setLayout(new FlowLayout(FlowLayout.LEFT, 10, 10));
-		String[] bookStores = new String[] { "LEGIMI", "UPOLUJ EBOOKA" };
+		String[] bookStores = new String[] { "LEGIMI", "UPOLUJ EBOOKA", "28 KSIĄŻEK" };
 
-		// create a combo box with items specified in the String array:
+		/**
+		 * Utworzenie komponentu combo box wyświetlającego poszczególne
+		 * księgarnie na podstawie tablicy bookStores
+		 */
+
 		final JComboBox<String> bookStoreList = new JComboBox<String>(bookStores);
 
-		// customize some appearance:
+		/**
+		 * Ustawienie parametrów wyglądu interfejsu
+		 */
+
 		bookStoreList.setForeground(Color.BLACK);
 		bookStoreList.setFont(new Font("Arial", Font.BOLD, 14));
 		bookStoreList.setMaximumRowCount(10);
 
-		// make the combo box editable so we can add new item when needed
-		bookStoreList.setEditable(true);
+		/**
+		 * Metody ustawiające zdarzenia dla przycisku "Select" Wyświetlanie
+		 * danych log dla danej księgarni
+		 */
 
-		// add an event listener for the combo box
-		bookStoreList.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent event) {
-				JComboBox<String> combo = (JComboBox<String>) event.getSource();
-				String selectedBookstore = (String) combo.getSelectedItem();
-
-				DefaultComboBoxModel<String> model = (DefaultComboBoxModel<String>) combo.getModel();
-
-				int selectedIndex = model.getIndexOf(selectedBookstore);
-				if (selectedIndex < 0) {
-					// if the selected book does not exist before,
-					// add it into this combo box
-					model.addElement(selectedBookstore);
-				}
-
-			}
-		});
-
-		// add event listener for the button Select
 		buttonSelect.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent event) {
 				String selectedBookstore = (String) bookStoreList.getSelectedItem();
 				if (selectedBookstore.equals(bookStores[0])) {
-					JOptionPane.showMessageDialog(GUI.this, FileReaderToSwing.OpenLogFile("logingRobot.log", "Legimi"));
+					JOptionPane.showMessageDialog(GUI.this,
+							FileReaderToSwing.OpenLogFile("logingRobot.log", "Legimi"));
 				}
 				if (selectedBookstore.equals(bookStores[1])) {
-					JOptionPane.showMessageDialog(GUI.this, FileReaderToSwing.OpenLogFile("logingRobot.log", "Upolujebooka"));
+					JOptionPane.showMessageDialog(GUI.this,
+							FileReaderToSwing.OpenLogFile("logingRobot.log", "Upolujebooka"));
+				}
+				if (selectedBookstore.equals(bookStores[2])) {
+					JOptionPane.showMessageDialog(GUI.this,
+							FileReaderToSwing.OpenLogFile("logingRobot.log", "28Ksiazek"));
 				}
 			}
 		});
 
-		// add event listener for the button Remove
-		buttonRemove.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent event) {
-				String selectedBookstore = (String) bookStoreList.getSelectedItem();
-				bookStoreList.removeItem(selectedBookstore);
-			}			
-			
-			
-		});
+		/**
+		 * Dodanie komponentów do intefjesu
+		 */
 
-		// add components to this frame
 		add(bookStoreList);
 		add(buttonSelect);
-		//add(buttonRemove);
 
 		pack();
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLocationRelativeTo(null);
-
 	}
 
+	/**
+	 * Metoda odpowiedzialna za wywołanie okna i ustawienie go jako widocznego
+	 */
 	public void run() {
 		new GUI().setVisible(true);
 	}
-	
+
 }
