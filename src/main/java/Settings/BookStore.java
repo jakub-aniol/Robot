@@ -10,6 +10,7 @@ public class BookStore {
     URL url;
 
     public BookStore(String name, URL url){
+
         this.name = name;
         this.url = url;
     }

@@ -1,27 +1,27 @@
 package GUI;
 
-import Robot.FileBuffer;
-import java.awt.*;
-import java.awt.event.*;
+import Robot.FileReaderToSwing;
+
 import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class GUI extends JFrame {
 
 	private JButton buttonSelect = new JButton("Select");
 	private JButton buttonRemove = new JButton("Remove");
-
+	
 	public GUI() {
 		super("ROBOT");
-
 		setLayout(new FlowLayout(FlowLayout.LEFT, 10, 10));
-
-		String[] bookStores = new String[] { "LEGIMI", "HELION" };
+		String[] bookStores = new String[] { "LEGIMI", "UPOLUJ EBOOKA" };
 
 		// create a combo box with items specified in the String array:
-		final JComboBox<String> bookStoreList = new JComboBox<String>(bookStores);	
+		final JComboBox<String> bookStoreList = new JComboBox<String>(bookStores);
 
 		// customize some appearance:
-		bookStoreList.setForeground(Color.BLUE);
+		bookStoreList.setForeground(Color.BLACK);
 		bookStoreList.setFont(new Font("Arial", Font.BOLD, 14));
 		bookStoreList.setMaximumRowCount(10);
 
@@ -53,8 +53,12 @@ public class GUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent event) {
 				String selectedBookstore = (String) bookStoreList.getSelectedItem();
-				JOptionPane.showMessageDialog(GUI.this, FileBuffer.OpenLogFile("logingRobot2.log"));
-
+				if (selectedBookstore.equals(bookStores[0])) {
+					JOptionPane.showMessageDialog(GUI.this, FileReaderToSwing.OpenLogFile("logingRobot.log", "Legimi"));
+				}
+				if (selectedBookstore.equals(bookStores[1])) {
+					JOptionPane.showMessageDialog(GUI.this, FileReaderToSwing.OpenLogFile("logingRobot.log", "Upolujebooka"));
+				}
 			}
 		});
 
@@ -65,6 +69,9 @@ public class GUI extends JFrame {
 				String selectedBookstore = (String) bookStoreList.getSelectedItem();
 				bookStoreList.removeItem(selectedBookstore);
 			}
+			
+			
+			
 		});
 
 		// add components to this frame
@@ -75,21 +82,20 @@ public class GUI extends JFrame {
 		pack();
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLocationRelativeTo(null);
+
 	}
 
-	public static void main(String[] args) {
-		try {
-			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-		} catch (Exception ex) {
-			ex.printStackTrace();
-		}
-
-		SwingUtilities.invokeLater(new Runnable() {
-
-			@Override
-			public void run() {
-				new GUI().setVisible(true);
-			}
-		});
+	public void run() {
+		new GUI().setVisible(true);
 	}
+
+	/*
+	 * public static void main(String[] args) { try {
+	 * UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName()); }
+	 * catch (Exception ex) { ex.printStackTrace(); }
+	 * 
+	 * SwingUtilities.invokeLater(new Runnable() {
+	 * 
+	 * @Override public void run() { new GUI().setVisible(true); } }); }
+	 */
 }

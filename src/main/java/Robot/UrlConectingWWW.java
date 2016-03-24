@@ -4,25 +4,29 @@ package Robot;
 import org.apache.log4j.Logger;
 
 import java.io.IOException;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
 
 /**
- * Created by ja on 19.03.16.
+ * Klasa zestawiająca połączenie URL
+ * @author Created by jakub_aniol on 19.03.16.
+ * @version 1.0.0
  */
 public class UrlConectingWWW {
 
-    private URLConnection urlc;
-
     final static Logger logger = Logger.getLogger(UrlConectingWWW.class);
 
+    private URLConnection urlc;
+
+    /**
+     *  Metoda odpowiedzialna za zesatwienie połączenia z daną stroną WWW
+     * @param url - Klasy URL
+     * @return urlc - Klasy URLConnection
+     */
     public URLConnection explore(URL url) {
 
         try {
             urlc = url.openConnection();
-        } catch (MalformedURLException e) {
-            logger.error("Nieprawidłowy adres URL: " + url);
         } catch (IOException e) {
             e.printStackTrace();
         }

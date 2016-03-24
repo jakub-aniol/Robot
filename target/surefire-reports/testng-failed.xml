@@ -4,9 +4,9 @@
   <test name="Command line test" preserve-order="false">
     <classes>
       <class name="Settings.BookStoreTest"/>
+      <class name="Scanners.ScanRobotLegimiTest"/>
       <class name="Robot.InputStreamWWWTest"/>
       <class name="Robot.ScanningWWWTest"/>
-      <class name="Robot.Scanners.ScanRobotLegimiTest"/>
     </classes>
   </test> <!-- Command line test -->
 </suite> <!-- Failed suite [Command line suite] -->

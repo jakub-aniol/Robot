@@ -1,4 +1,6 @@
-package Robot.Scanners;
+
+
+package Scanners;
 
 import Settings.BookStore;
 import org.apache.log4j.Logger;
@@ -6,17 +8,36 @@ import org.apache.log4j.Logger;
 import java.util.List;
 import java.util.ListIterator;
 
+
 /**
- * Created by jakub on 21.03.16.
+ * Klasa odpowidzialna za wykonanie operacji wyszukujących darmowe książki
+ * @author Created by Jakub_Aniol
+ * @version 1.0.0
  */
+
+
+
 public class ScanRobotLegimi {
     final static Logger logger = Logger.getLogger(ScanRobotLegimi.class);
 
-    BookStore bsLegimi;
+    /**
+     * Obiekt księgarni
+     */
+
+    private final BookStore bsLegimi;
 
     public ScanRobotLegimi(BookStore bookStore) {
         bsLegimi = bookStore;
     }
+
+    /**
+     * Metoda odpowiedzialna za wydzielenie sublisty ograniczającej wielkość listę zawierającą
+     * całą stronę www do mniejszego obszaru, z ktorego latwiej mozna wyodrębnić darmowe e-booki
+     *
+     * @param contentWWW klasy List<String>
+     * @return subContentWWW klasy List</String>
+     * @throws IndexOutOfBoundsException
+     */
 
     public List<String> doSubContentWWW(List<String> contentWWW) {
         List<String> subContentWWW = null;
@@ -32,8 +53,16 @@ public class ScanRobotLegimi {
         return subContentWWW;
     }
 
+
+   /**
+     * Metoda zawierająca algorytm zczytania odpowiednich treści pozawalajaych na wyświeltenie darmowych książek
+     * @param list - Klasy List
+     * @throws NullPointerException
+     */
+
     public void showLegimiBooks(List list) {
-        ListIterator<String> iterWWW = null;
+
+        ListIterator<String> iterWWW;
         try {
             iterWWW = list.listIterator();
 
@@ -53,3 +82,4 @@ public class ScanRobotLegimi {
         }
     }
 }
+
