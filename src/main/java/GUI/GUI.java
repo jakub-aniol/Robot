@@ -66,8 +66,7 @@ public class GUI extends JFrame {
 			public void actionPerformed(ActionEvent event) {
 				String selectedBookstore = (String) bookStoreList.getSelectedItem();
 				bookStoreList.removeItem(selectedBookstore);
-			}
-			
+			}			
 			
 			
 		});
@@ -75,7 +74,7 @@ public class GUI extends JFrame {
 		// add components to this frame
 		add(bookStoreList);
 		add(buttonSelect);
-		add(buttonRemove);
+		//add(buttonRemove);
 
 		pack();
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -86,14 +85,5 @@ public class GUI extends JFrame {
 	public void run() {
 		new GUI().setVisible(true);
 	}
-
-	/*
-	 * public static void main(String[] args) { try {
-	 * UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName()); }
-	 * catch (Exception ex) { ex.printStackTrace(); }
-	 * 
-	 * SwingUtilities.invokeLater(new Runnable() {
-	 * 
-	 * @Override public void run() { new GUI().setVisible(true); } }); }
-	 */
+	
 }
